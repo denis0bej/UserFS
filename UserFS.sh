@@ -6,7 +6,7 @@ while true; do
     for user in `users`; do
         test -d ~/Desktop/root/$user || mkdir ~/Desktop/root/$user
         ps -u "$user" > ~/Desktop/root/$user/procs
-        test -f /Desktop/root/$user/lastlogin && rm ~/Desktop/root/$user/lastlogin
+        rm -f ~/Desktop/root/$user/lastlogin
     done
  
     for user in $(ls ~/Desktop/root); do
